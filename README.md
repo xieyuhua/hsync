@@ -4,7 +4,7 @@
  * @Author: seaslog
  * @Date: 2022-03-07 12:23:34
  * @LastEditors: 谢余华
- * @LastEditTime: 2022-03-07 13:37:54
+ * @LastEditTime: 2022-03-07 14:02:52
 -->
 hsync
 ===
@@ -25,6 +25,7 @@ go get -u github.com/xieyuhua/hsync
 
 ## useage
 ### server:
+
 >hsync -d hsyncd.json
 
 ```
