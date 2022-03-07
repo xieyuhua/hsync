@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: seaslog
+ * @Date: 2022-03-07 12:23:34
+ * @LastEditors: 谢余华
+ * @LastEditTime: 2022-03-07 13:37:54
+-->
 hsync
 ===
 基于fsnotify的实时文件同步工具  
@@ -11,7 +19,7 @@ hsync
 ## install
 
 ```
-go get -u github.com/hidu/hsync
+go get -u github.com/xieyuhua/hsync
 ```
 
 
@@ -28,7 +36,7 @@ go get -u github.com/hidu/hsync
         {"from":"a/","to":"d/"}，
         {"from":"phpsrc/","to":"/home/work/app/phpsrc/"}
     ],
-     "deployCmd":""
+     "deployCmd":"bash deploy.sh /home/work/app/phpsrc/index.php phpsrc/index.php update"
 }
 ```
 说明：  

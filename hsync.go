@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: seaslog
+ * @Date: 2022-03-07 12:23:34
+ * @LastEditors: 谢余华
+ * @LastEditTime: 2022-03-07 13:33:26
+ */
 /**
 * sync dir
 * author: hidu <duv123+git@gmail.com>
@@ -9,11 +17,10 @@ package main
 import (
 	"flag"
 	"fmt"
+	hsync "hsync/internal"
 	"os"
 
 	"github.com/golang/glog"
-
-	hsync "github.com/hidu/hsync/internal"
 )
 
 var d = flag.Bool("d", false, "run model,default is client")
@@ -29,7 +36,7 @@ func init() {
 	df := flag.Usage
 	flag.Usage = func() {
 		df()
-		fmt.Fprintln(os.Stderr, "\n  sync dir, https://github.com/hidu/hsync/")
+		fmt.Fprintln(os.Stderr, "\n  sync dir, hsync")
 		fmt.Fprintln(os.Stderr, "  as client:", os.Args[0], "   [hsync.json]")
 		fmt.Fprintln(os.Stderr, "  as server:", os.Args[0], "-d [hsyncd.json]")
 	}

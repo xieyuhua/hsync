@@ -27,3 +27,5 @@ _testmain.go
 example/*
 hsync_*
 tmp
+
+dist/
