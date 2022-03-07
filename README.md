@@ -4,7 +4,7 @@
  * @Author: seaslog
  * @Date: 2022-03-07 12:23:34
  * @LastEditors: 谢余华
- * @LastEditTime: 2022-03-07 14:02:52
+ * @LastEditTime: 2022-03-07 14:25:15
 -->
 hsync
 ===
@@ -20,13 +20,15 @@ hsync
 
 ```
 go get -u github.com/xieyuhua/hsync
+
+go generate
 ```
 
 
 ## useage
 ### server:
 
->hsync -d hsyncd.json
+> hsync -d hsyncd.json
 
 ```
 {
@@ -49,11 +51,11 @@ go get -u github.com/xieyuhua/hsync
 6. home：本地保存接收文件的目录，可以是相对于配置文件的相对路径，也可以是绝对路径
 
 deployCmd运行时的实际参数：
->bash deploy.sh dst_path src_path update  
+> bash deploy.sh dst_path src_path update  
 
 即运行时会添加上参数 `dst_path src_path update`,`deploy.sh`脚本可以自己依据参数做一些业务逻辑  
 
->bash deploy.sh /home/work/app/phpsrc/index.php phpsrc/index.php update
+> bash deploy.sh /home/work/app/phpsrc/index.php phpsrc/index.php update
 
 #### deploy.sh demo
 ```
@@ -72,7 +74,7 @@ fi
 
 
 ### client:
->hsync hsync.json  
+> hsync hsync.json  
 
 ```
 {
@@ -92,5 +94,22 @@ fi
 4. server: 服务端地址  
 
 默认忽略的文件：
->.*  
->*~  
+> .*  
+> *~  
+
+
+### Config File(asset.json)
+
+```
+> go generate
+2022/03/07 14:21:44 [goasset] asset Config: {"src":"resource/","dest":"resource/asset.go","package":"resource","debug":""}
+2022/03/07 14:21:44 [goasset] Current Dir: E:\gitdada\hsync\hsync
+2022/03/07 14:21:44 [goasset] Total  0 Assets
+2022/03/07 14:21:44 [goasset] pack asset success
+
+{
+  "src":"res|res2",
+  "dest":"resource/asset.go",
+  "package":"resource"
+}
+```
